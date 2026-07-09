@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherHub - Framework Specifications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: { dark: '#020617', card: '#0f172a', accent: '#6366f1', neon: '#10b981' } } } } }
+    </script>
+</head>
+<body class="bg-brand-dark text-slate-200 font-sans min-h-screen flex flex-col justify-between">
+
+    <!-- PROMPT DOCUMENTATION FOR About
+    Prompt: "Using the master layout design context, construct about.html. Build a technical specifications page describing platform framework alignment, featuring multi-column structural grid readouts."
+    -->
+
+    <!-- STICKY HEADER -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-brand-dark/80 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2"><a href="index.html" class="text-brand-neon font-mono font-black text-xl">ÆTHER.HUB</a></div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
+                <a href="index.html" class="hover:text-slate-200">Dashboard</a>
+                <div class="relative group py-4">
+                    <button class="text-brand-neon flex items-center gap-1">Modules ▼</button>
+                    <div class="absolute top-full left-0 w-48 bg-brand-card border border-slate-800 rounded-md shadow-xl z-50">
+                        <a href="resources.html" class="block px-4 py-2 text-xs hover:bg-slate-800 hover:text-white">Tech Directory</a>
+                        <a href="insights.html" class="block px-4 py-2 text-xs hover:bg-slate-800 hover:text-white">Insights Blog</a>
+                        <a href="about.html" class="block px-4 py-2 text-xs bg-slate-800 text-white font-bold">Framework Specs</a>
+                    </div>
+                </div>
+                <a href="about.html" class="text-slate-200 font-bold">About</a>
+                <a href="contact.html" class="hover:text-slate-200">Contact</a>
+            </nav>
+            <div><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-neon/10 text-brand-neon font-mono">SYS_ONLINE</span></div>
+        </div>
+    </header>
+
+    <!-- CONTENT MODULE -->
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 py-12 space-y-10">
+        <div>
+            <h2 class="text-xs uppercase tracking-widest font-mono text-brand-neon mb-2">// Structural Alignment</h2>
+            <h3 class="text-3xl font-black text-white tracking-tight">System Infrastructure</h3>
+        </div>
+
+        <div class="bg-brand-card p-6 rounded-xl border border-slate-800/80 leading-relaxed text-slate-400 text-sm space-y-4">
+            <p>
+                ÆTHER.HUB operates as a cross-linked multi-page documentation container engineered specifically to resolve asset accessibility challenges across regional processing blocks.
+            </p>
+            <p>
+                By maintaining uniform sticky parameters on both navigation margins, users retain comprehensive navigational control regardless of vertical depth position on content viewports.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs font-mono">
+            <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="text-brand-neon block mb-1">CORE DEPENDENCIES:</span>
+                Tailwind Engine v3.4 CDN • Vanilla Viewport State Handlers
+            </div>
+            <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="text-brand-accent block mb-1">LAYOUT INTEGRITY:</span>
+                完全 Mobile Responsive • Flexbox Vertical Dynamic Justification
+            </div>
+        </div>
+    </main>
+
+    <!-- STICKY FOOTER -->
+    <footer class="sticky bottom-0 z-40 bg-brand-dark/95 border-t border-slate-900 py-4 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-slate-500">
+            <p>&copy; 2026 ÆTHER.HUB Framework System.</p>
+            <div class="flex space-x-6 mt-2 sm:mt-0"><span>Node: Enugu_Primary</span><span>Vibe: Pure Code Validation</span></div>
+        </div>
+    </footer>
+
+</body>
+</html>

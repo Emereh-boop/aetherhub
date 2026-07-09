@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherHub - Architecture & Resource Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brand: { dark: '#020617', card: '#0f172a', accent: '#6366f1', neon: '#10b981' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-slate-200 font-sans min-h-screen flex flex-col justify-between">
+
+    <!-- PROMPT DOCUMENTATION FOR Index
+    Prompt: "Act as an infrastructure architect. Build a dashboard layout for a tech resources directory. Include a sticky header with a fully accessible interactive dropdown navigation menu link system connecting 5 structural pages, a high-impact engineering hero layout, a telemetry status dashboard grid, and a permanent sticky footer."
+    -->
+
+    <!-- STICKY HEADER WITH DROPDOWN MENU -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-brand-dark/80 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="text-brand-neon font-mono font-black text-xl tracking-wider">ÆTHER.HUB</a>
+            </div>
+            <!-- Connected Nav Items with Desktop Dropdown -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
+                <a href="index.html" class="text-brand-neon font-bold">Dashboard</a>
+                <div class="relative group py-4">
+                    <button class="hover:text-slate-200 flex items-center gap-1 transition-colors focus:outline-none">
+                        Modules <span>▼</span>
+                    </button>
+                    <!-- Dropdown Content Linking Across the Ecosystem -->
+                    <div class="absolute top-full left-0 w-48 bg-brand-card border border-slate-800 rounded-md shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <a href="resources.html" class="block px-4 py-2 text-xs hover:bg-slate-800 hover:text-white">Tech Directory</a>
+                        <a href="insights.html" class="block px-4 py-2 text-xs hover:bg-slate-800 hover:text-white">Insights Blog</a>
+                        <a href="about.html" class="block px-4 py-2 text-xs hover:bg-slate-800 hover:text-white">Framework Specs</a>
+                    </div>
+                </div>
+                <a href="about.html" class="hover:text-slate-200 transition-colors">About</a>
+                <a href="contact.html" class="hover:text-slate-200 transition-colors">Contact</a>
+            </nav>
+            <div>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-neon/10 text-brand-neon font-mono">SYS_ONLINE</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CORE BODY CONTAINER -->
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 py-12 space-y-16">
+        
+        <!-- HERO SEGMENT -->
+        <section class="py-10 text-center max-w-3xl mx-auto">
+            <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight mb-6">
+                Centralized Architecture & <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-neon">Resource Orchestration.</span>
+            </h1>
+            <p class="text-slate-400 text-base sm:text-lg mb-8 leading-relaxed">
+                Welcome to the technical directory. Explore systemic documentation pipelines, curated framework repositories, and low-latency code integrations organized inside an open knowledge interface.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="resources.html" class="bg-brand-accent hover:bg-indigo-600 text-white px-6 py-3 rounded text-sm font-semibold transition-all shadow-md">Browse Directory</a>
+                <a href="insights.html" class="bg-slate-900 border border-slate-800 text-slate-300 px-6 py-3 rounded text-sm font-semibold hover:bg-slate-800 transition-all">Read Analysis Logs</a>
+            </div>
+        </section>
+
+        <!-- LIVE TELEMETRY MATRIX -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-brand-card p-6 rounded-xl border border-slate-800/80">
+                <h3 class="text-slate-400 font-mono text-xs uppercase tracking-wider mb-2">/ Tracked Packages</h3>
+                <p class="text-3xl font-extrabold text-white">1,420</p>
+                <div class="mt-4 text-xs text-brand-neon">Active builds synchronizing</div>
+            </div>
+            <div class="bg-brand-card p-6 rounded-xl border border-slate-800/80">
+                <h3 class="text-slate-400 font-mono text-xs uppercase tracking-wider mb-2">/ Direct Pipelines</h3>
+                <p class="text-3xl font-extrabold text-white">99.98%</p>
+                <div class="mt-4 text-xs text-slate-500">Node latency: 12ms nominal</div>
+            </div>
+            <div class="bg-brand-card p-6 rounded-xl border border-slate-800/80">
+                <h3 class="text-slate-400 font-mono text-xs uppercase tracking-wider mb-2">/ Documentation Depth</h3>
+                <p class="text-3xl font-extrabold text-white">5 Modules</p>
+                <div class="mt-4 text-xs text-brand-accent">Cross-linked ecosystem active</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- STICKY FOOTER -->
+    <footer class="sticky bottom-0 z-40 bg-brand-dark/95 border-t border-slate-900 py-4 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-slate-500">
+            <p>&copy; 2026 ÆTHER.HUB Framework System.</p>
+            <div class="flex space-x-6 mt-2 sm:mt-0">
+                <span>Node: Enugu_Primary</span>
+                <span>Vibe: Pure Code Validation</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

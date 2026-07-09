@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherHub - Engineering Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: { dark: '#020617', card: '#0f172a', accent: '#6366f1', neon: '#10b981' } } } } }
+    </script>
+</head>
+<body class="bg-brand-dark text-slate-200 font-sans min-h-screen flex flex-col justify-between">
+
+    <!-- PROMPT DOCUMENTATION FOR Insights
+    Prompt: "Using the master layout design context, construct insights.html. Build a responsive chronological technical blog journal page. Feature an expanded layout for a featured entry followed by standard summary grid elements."
+    -->
+
+    <!-- STICKY HEADER -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-brand-dark/80 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2"><a href="index.html" class="text-brand-neon font-mono font-black text-xl">ÆTHER.HUB</a></div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
+                <a href="index.html" class="hover:text-slate-200">Dashboard</a>
+                <div class="relative group py-4">
+                    <button class="text-brand-neon flex items-center gap-1">Modules ▼</button>
+                    <div class="absolute top-full left-0 w-48 bg-brand-card border border-slate-800 rounded-md shadow-xl z-50">
+                        <a href="resources.html" class="block px-4 py-2 text-xs hover:bg-slate-800 hover:text-white">Tech Directory</a>
+                        <a href="insights.html" class="block px-4 py-2 text-xs bg-slate-800 text-white font-bold">Insights Blog</a>
+                        <a href="about.html" class="block px-4 py-2 text-xs hover:bg-slate-800 hover:text-white">Framework Specs</a>
+                    </div>
+                </div>
+                <a href="about.html" class="hover:text-slate-200">About</a>
+                <a href="contact.html" class="hover:text-slate-200">Contact</a>
+            </nav>
+            <div><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-neon/10 text-brand-neon font-mono">SYS_ONLINE</span></div>
+        </div>
+    </header>
+
+    <!-- CONTENT WRAPPER -->
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 py-12 space-y-12">
+        <div>
+            <h2 class="text-xs uppercase tracking-widest font-mono text-brand-accent mb-2">// Engineering Journals</h2>
+            <h3 class="text-3xl font-black text-white tracking-tight">Technical Deep Dives</h3>
+        </div>
+
+        <!-- FEATURED JOURNAL POST -->
+        <article class="bg-brand-card p-8 rounded-xl border border-slate-800/80 space-y-4">
+            <div class="flex items-center gap-4 text-xs font-mono text-slate-500">
+                <span>JULY 09, 2026</span>
+                <span>•</span>
+                <span class="text-brand-neon">ARCHITECTURE REVIEW</span>
+            </div>
+            <h4 class="text-2xl font-bold text-white hover:text-brand-accent transition-colors cursor-pointer">Deconstructing Multi-Prompt Vibe Engineering Workflows</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+                An explicit assessment detailing how iterative token engineering constructs pristine layout hierarchies. By breaking complex layout systems down into sequential prompt payloads, software interfaces avoid typical monolithic generation issues.
+            </p>
+            <div class="pt-2">
+                <span class="text-xs font-mono text-brand-accent cursor-pointer hover:underline">Read Full System Log &rarr;</span>
+            </div>
+        </article>
+
+        <!-- OTHER LOGS GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-brand-card p-6 rounded-xl border border-slate-800/60">
+                <span class="text-[10px] font-mono text-slate-500 block mb-2">JULY 06, 2026</span>
+                <h5 class="text-lg font-bold text-white mb-2">Tailwind CDN Layout Optimization</h5>
+                <p class="text-xs text-slate-400 leading-relaxed">Handling layout shifts dynamically by extending core system colors within reactive script frames.</p>
+            </div>
+            <div class="bg-brand-card p-6 rounded-xl border border-slate-800/60">
+                <span class="text-[10px] font-mono text-slate-500 block mb-2">JULY 02, 2026</span>
+                <h5 class="text-lg font-bold text-white mb-2">Low-Latency Navigation State Controls</h5>
+                <p class="text-xs text-slate-400 leading-relaxed">Evaluating drop-down menu layer styling to prevent element truncation in compact viewing screens.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- STICKY FOOTER -->
+    <footer class="sticky bottom-0 z-40 bg-brand-dark/95 border-t border-slate-900 py-4 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-slate-500">
+            <p>&copy; 2026 ÆTHER.HUB Framework System.</p>
+            <div class="flex space-x-6 mt-2 sm:mt-0"><span>Node: Enugu_Primary</span><span>Vibe: Pure Code Validation</span></div>
+        </div>
+    </footer>
+
+</body>
+</html>
